@@ -6,7 +6,11 @@ export default function Main() {
 
     function submitHandler(event) {
         event.preventDefault()
-        console.log("insert")
+        const formData = new FormData(event.currentTarget);
+        const newIngredient = formData.get("ingredient");
+        ingredients.push(newIngredient);
+
+
     }
 
     return (
